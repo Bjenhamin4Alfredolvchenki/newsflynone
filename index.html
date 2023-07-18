@@ -232,13 +232,12 @@ html {
 <!--###-----------------------------------------------------#######-->
 <!--###-----------------------------------------------------#######-->
 <!-- ############################################################ -->
-<style>
-body {font-family: Arial;}
 
+<style>
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 5px solid #ccc;
   background-color: #f1f1f1;
 }
 
@@ -264,16 +263,16 @@ body {font-family: Arial;}
   background-color: #ccc;
 }
 
-/* Style the tab content */
 /**** Style the tab content ****/
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 2s;
+  border: 10px solid #ccc;
   border-top: none;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
-
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
@@ -286,6 +285,7 @@ body {font-family: Arial;}
   to {opacity: 1;}
 }
 </style>
+
 <!-- ############################################################ -->
 <!--###-----------------------------------------------------#######-->
 <!--###-----------------------------------------------------#######-->
