@@ -232,12 +232,13 @@ html {
 <!--###-----------------------------------------------------#######-->
 <!--###-----------------------------------------------------#######-->
 <!-- ############################################################ -->
-
 <style>
+body {font-family: Arial;}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 5px solid #ccc;
+  border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
@@ -263,16 +264,16 @@ html {
   background-color: #ccc;
 }
 
+/* Style the tab content */
 /**** Style the tab content ****/
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 2s;
-  border: 10px solid #ccc;
+  border: 1px solid #ccc;
   border-top: none;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
+
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
@@ -285,8 +286,6 @@ html {
   to {opacity: 1;}
 }
 </style>
-
-
 <!-- ############################################################ -->
 <!--###-----------------------------------------------------#######-->
 <!--###-----------------------------------------------------#######-->
@@ -861,40 +860,53 @@ document.getElementById("demo").innerHTML = d;
 <!---------------------------------------------------------->
 
 
-
-<h3>Fade in Tabs</h3>
-
-
-<!---------------------------------------------------------->
-<!---------------------------------------------------------->
- 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 </div>
 
 <!---------------------------------------------------------->
 <!---------------------------------------------------------->
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
 <div id="London" class="tabcontent">
   <h3>London</h3>
   <p>London is the capital city of England.</p>
+  <rssapp-wall id="CXySRZ5avHKPgHy9"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
 </div>
 
 
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
 <!---------------------------------------------------------->
 <!---------------------------------------------------------->
 <div id="Paris" class="tabcontent">
   <h3>Paris</h3>
   <p>Paris is the capital of France.</p> 
+  <rssapp-wall id="CXySRZ5avHKPgHy9"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
 </div>
 
+
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
 <div id="Tokyo" class="tabcontent">
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
+  <rssapp-wall id="CXySRZ5avHKPgHy9"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
 </div>
 
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
 
+
+
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
 <!---------------------------------------------------------->
 <!---------------------------------------------------------->
 <script>
@@ -911,9 +923,11 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
    
-
 
 <!---------------------------------------------------------->
 <!---------------------------------------------------------->
@@ -1017,4 +1031,3 @@ function openCity(evt, cityName) {
 
 </body>
 </html>
-
